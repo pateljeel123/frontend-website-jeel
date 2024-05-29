@@ -1,0 +1,175 @@
+*{
+    margin:0%;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+}
+nav{
+    background-color: #54978A;
+}
+hr{
+    background-color: red;
+    height: 10px;
+    margin: 0px;
+    padding: 0px;
+}line{
+    background-color: #212121;
+    height: 3px;
+    display: block;
+    width: 100%;
+}
+.second img{
+    height: 50px;
+}
+.menu li{
+    list-style: none;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-wrap: wrap;
+}
+.menu ul a{
+    text-decoration: none;
+    color: black    ;
+    padding: 10px 20px;
+}
+.big-img .img1{
+    width: 100%;
+    height: 620px;
+}
+.big-img .im2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    padding-top: 20px;
+}
+.big-img .im2 .img2{
+    background-image: url('https://commondeer.com/cdn/shop/files/3Q8A1071_19a5970c-562b-4101-832e-aa98b7bd6751_900x.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+}
+.big-img .im2 .img3{
+    background-image: url('https://commondeer.com/cdn/shop/files/JS_Blank_wall_flags_1_54e0116f-3889-4922-9cde-f7c0b020c4e4_900x.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+}
+.big-img .img2 , .img3{
+    width: 755px;
+    height: 350px;
+}
+.two-box .white{
+    background-color: white;
+    height: fit-content;
+}
+.two-box .black{
+    background-image: url('https://commondeer.com/cdn/shop/files/C__New_Duds_Map_in_Store_3_900x.jpg?v=1613756149.jpg');
+}
+.two-box button{
+    background-color: black;
+    color: white;
+    outline: none;
+    border: #141414;
+    padding: 10px 20px;
+}
+.row{
+    width: 100%;
+}
+.bg-white{
+    background-color: white;
+    width: 100%;
+}
+.bg-white-img{
+    padding: 40px;
+}
+.bg-white-img img{
+    width: max-content;
+    height: 500px;
+    display: block;
+    margin: auto;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.input button{
+    padding: 0px 10px;
+}
+.b-color{
+    background-color: #447168;
+    width: 100%;
+    height:392px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b-color .col-2 img{
+     height: 250px;
+}
+ul li{
+    list-style: none;
+
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+.b-color .row{
+    display: flex;
+    justify-content:space-between ;
+    padding: 0 50px;
+    align-items: center;
+}
+.second .side{
+    position: absolute;
+    right: 0;
+    top: 70px;
+}
+.second .side h6 a{
+    text-decoration: none;
+    color: black;
+}
+form{
+    width: 50%;
+}
+form input{
+    width: 100%;
+    height: 48px;
+    border: 1px solid #e4e4e4;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+form button{
+    /* display: contents; */
+    background-color: black;
+    color: white;
+    width: fit-content;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+form a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+form .inline a{
+    padding: 10px 50px;
+}
+form a:hover{
+    color: black;
+}
