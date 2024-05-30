@@ -34,7 +34,7 @@
 
 
 .logo {
-    height: 60px;
+    height: 100%;
 }
 
 
@@ -64,7 +64,7 @@
     background-size: cover;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cdn.shopify.com/s/files/1/0209/0478/files/P4160105_final_desktop_hero.jpg');
     background-position: center;
-    position: relative;
+   
 }
 
 .con{

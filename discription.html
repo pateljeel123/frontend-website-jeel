@@ -81,7 +81,20 @@
                     </a>
                     <a href="signup.html" style="text-decoration: none; color:black">SIGN UP</a>
                     <a class="p-3 cd" href=""><i class="bi bi-search ci"></i></a>
-                    <a class="p-3 cd" href="cart.html"><i class="bi bi-bag-heart ci"></i></a>
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"><i class="bi bi-bag-heart ci"></i></button>
+                    <div class="offcanvas offcanvas-end" style="width: 50%;" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <h1 style="text-align: center;">Card Page</h1>
+                            <div id="cardlist"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,4 +222,59 @@
         }).then(response => response.json())
         .then(data => alert('POST request successful:'))
      })
+</script>
+<script>
+    let cards = document.getElementById("cardlist")
+    let prodata = []
+    fetch("https://backend-website-jeel.onrender.com/cart")
+        .then((res) => res.json())
+        .then((json) => {
+            onecardData(json)
+            prodata = json
+        })
+        .catch((err) => console.log(err));
+
+    function onecardData(data) {
+        let store = data.map((data) => cardlist(data.title, data.id, data.image, data.price, data.description, data.founder, data.category));
+        cards.innerHTML = store.join("");
+    }
+    function cardlist(title, id, image, price, description, founder, category) {
+        let onecard = `
+    <a href="description.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}
+    &founder=${encodeURIComponent(founder)}&category=${encodeURIComponent(category)}&description=${encodeURIComponent(description)}">        
+        <div class="card" data-id=${id}>
+        <div class="card-img">
+        <img class="card-img-img" src=${image} alt="">
+        </div>
+        <div class="card-body">
+        <h4 class="card-title">${title}</h4>
+        <p class="card-price">$${price}</p>
+        <button class="card-button" data-id=${id}>Delete</button>
+        </div>
+        </div>
+    </a>
+    `;
+        return onecard;
+    }
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("card-button")) {
+            e.preventDefault();
+            delpitches(e.target.dataset.id);
+        } else if (e.target.classList.contains("card-link")) {
+            e.preventDefault();
+            // Handle the edit functionality here
+        }
+    });
+    function delpitches(id) {
+        fetch(`https://backend-website-jeel.onrender.com/cart/${id}`, {
+            method: "DELETE"
+        })
+            .then(res => { res.json() })
+            .then(json => {
+                console.log(json)
+                alert("Deleted....")
+                window.location.reload()
+            })
+            .catch((err) => { console.log(err) })
+    }
 </script>
