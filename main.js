@@ -15,7 +15,7 @@ function cardlist(data) {
 
 function card(id, image, title, description, price, percentage) {
     return `
-    <a href="description.html?id=${encodeURIComponent(id)}&image=${encodeURIComponent(image)}&title=${encodeURIComponent(title)}
+    <a href="discription.html?id=${encodeURIComponent(id)}&image=${encodeURIComponent(image)}&title=${encodeURIComponent(title)}
     &price=${encodeURIComponent(price)}&percentage=${encodeURIComponent(percentage)}&description=${encodeURIComponent(description)}">
     <div class="card" data-id="${id}">
     <div class="card-img">
@@ -29,11 +29,9 @@ function card(id, image, title, description, price, percentage) {
         font-style: normal;" style="margin-left:280px">${title}</h4>
         <p class="card-price" style="margin-left:280px">${price}</p>
         <button style=" padding:10px">BUY NOW</button>
-        <a class="p-3 cd text-end"style="margin-left:280px" href=""><i class="bi bi-bag-heart ci"></i></a>
+        <a href="discription.html" class="p-3 cd text-end"style="margin-left:280px"><i class="bi bi-bag-heart ci"></i></a>
         
     </div>
         </div>
     </a>    `
 }
-
-

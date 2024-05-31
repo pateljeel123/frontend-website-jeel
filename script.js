@@ -1,4 +1,3 @@
-//SignUp Form data
 let form = document.getElementById("signupform");
 let arr = []
 
