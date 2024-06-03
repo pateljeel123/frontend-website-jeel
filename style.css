@@ -62,7 +62,7 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cdn.shopify.com/s/files/1/0209/0478/files/P4160105_final_desktop_hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cdn.shopify.com/s/files/1/0209/0478/files/P4230055_desktop_hero.jpg?v=1716321738');
     background-position: center;
     position: relative;
 }
@@ -215,4 +215,12 @@
 
 .swiper-wrapper .text {
     width: 100%;
+}
+
+
+@media (min-width:320px) and (max-width:750px) {
+
+    .mediaclass{
+        flex-direction: column;
+    }
 }

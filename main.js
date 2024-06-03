@@ -15,21 +15,21 @@ function cardlist(data) {
 
 function card(id, image, title, description, price, percentage) {
     return `
-    <a href="discription.html?id=${encodeURIComponent(id)}&image=${encodeURIComponent(image)}&title=${encodeURIComponent(title)}
+    <a href="description.html?id=${encodeURIComponent(id)}&image=${encodeURIComponent(image)}&title=${encodeURIComponent(title)}
     &price=${encodeURIComponent(price)}&percentage=${encodeURIComponent(percentage)}&description=${encodeURIComponent(description)}">
     <div class="card" data-id="${id}">
     <div class="card-img">
-        <a><img src="${image}"  style="height:468px;width:470px; display:flex; " alt="">
+        <a><img src="${image}"  style="height:468px;width:470px; display:flex;  color:black;" alt="">
         
-    </div></a>
-    <div class="card-body">
+    </div></a style=" color:black;">
+    <div class="card-body text-dark ">
         <h4 class="card-title" style=" font-family: "Space Grotesk", sans-serif;
         font-optical-sizing: auto;
         font-weight: 1000;
-        font-style: normal;" style="margin-left:280px">${title}</h4>
-        <p class="card-price" style="margin-left:280px">${price}</p>
+        font-style: normal;" style="margin-left:280px;">${title}</h4>
+        <p class="card-price text-dark" style="margin-left:280px; color:black;">${price}</p>
         <button style=" padding:10px">BUY NOW</button>
-        <a href="discription.html" class="p-3 cd text-end"style="margin-left:280px"><i class="bi bi-bag-heart ci"></i></a>
+        <a class="p-3 cd text-end"style="margin-left:280px" href=""><i class="bi bi-bag-heart ci"></i></a>
         
     </div>
         </div>

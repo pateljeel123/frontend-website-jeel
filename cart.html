@@ -80,7 +80,7 @@
     }
     function cardlist(title, id, image, price, description, founder, category) {
         let onecard = `
-    <a href="description.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}
+    <a style="color:black;" href="description.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent(image)}&price=${encodeURIComponent(price)}
     &founder=${encodeURIComponent(founder)}&category=${encodeURIComponent(category)}&description=${encodeURIComponent(description)}">        
         <div class="card" data-id=${id}>
         <div class="card-img">
@@ -89,7 +89,7 @@
         <div class="card-body">
         <h4 class="card-title">${title}</h4>
         <p class="card-price">$${price}</p>
-        <button class="card-button" data-id=${id}>Delete</button>
+        <button class="card-button" style="padding:10px;padding-left:20px; padding-right:20px; background-color:#95F554;;" data-id=${id}>Delete</button>
         </div>
         </div>
     </a>
